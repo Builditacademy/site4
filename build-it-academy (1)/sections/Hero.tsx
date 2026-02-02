@@ -22,7 +22,7 @@ const ChevronDown = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const heroRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
@@ -117,7 +117,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+      <div className={`relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full ${language === 'az' ? 'max-w-7xl' : 'max-w-5xl'}`}>
         <div className="flex flex-col items-center text-center space-y-8">
           <h1 
             ref={titleRef}
