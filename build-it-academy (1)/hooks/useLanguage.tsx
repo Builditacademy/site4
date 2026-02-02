@@ -150,7 +150,7 @@ const translations: Translations = {
     nav_courses: 'Kurslar',
     nav_career: 'Karyera Məsləhətçisi',
     nav_contact: 'Əlaqə',
-    hero_title: 'IT gələcəyin burada başlayır!',
+    hero_title: 'IT gələcəyin {burada} başlayır!',
     hero_description: 'Bizimlə öyrən, beynəlxalq sertifikat al və IT dünyasında yerini tut',
     hero_cta: 'Kurslarımıza baxın',
     about_title: 'Niyə bizi seçməlisiniz?',
