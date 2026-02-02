@@ -82,7 +82,10 @@ export default function Hero() {
     }
   };
 
-  const heroTitleWords = t('hero_title').split(' ');
+  const heroTitle = t('hero_title');
+  // Split string by curly braces to find highlighted parts
+  const parts = heroTitle.split(/(\{.*?\})/);
+
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden aurora-bg">
