@@ -123,11 +123,16 @@ export default function Hero() {
             ref={titleRef}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white"
           >
-            {heroTitleWords.map((word, index) => (
-              <span key={index} className={index === heroTitleWords.length - 1 ? "bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] bg-clip-text text-transparent" : ""}>
-                {word}{' '}
-              </span>
-            ))}
+            {parts.map((part, index) => {
+              if (part.startsWith('{') && part.endsWith('}')) {
+                return (
+                  <span key={index} className="bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] bg-clip-text text-transparent">
+                    {part.slice(1, -1)}
+                  </span>
+                );
+              }
+              return <span key={index}>{part}</span>;
+            })}
           </h1>
           
           <p 
