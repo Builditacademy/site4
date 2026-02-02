@@ -161,7 +161,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-24 lg:py-32 bg-[#F5F5F7]"
+      className="relative py-24 lg:py-32 bg-[#F5F5F7] overflow-hidden"
     >
       {/* Background Decorative Blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
